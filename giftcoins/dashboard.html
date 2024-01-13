@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giftcoin Dashboard</title>
+  <link href="favicon_io/favicon-16x16.png" rel="shortcut icon"/>
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"rel="stylesheet" />
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .wallet-container {
+      margin-top: 2%;
+    }
+
+    .wallet-card {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .wallet-header {
+      background-color: #000000;
+      color: #fff;
+      padding: 15px;
+    }
+
+    .wallet-balance {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .wallet-details {
+      padding: 15px;
+    }
+    .circle i {
+      width: 50px;
+      height: 50px;
+      background-color: #f9f9f9; /* Set your desired background color */
+      border-radius: 50%;
+      padding: 14px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle i {
+      color: #000000; /* Set your desired text color */
+      font-size: 20px; /* Set your desired icon size */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <h4>WALLET BALANCE</h4>
+        <!--<img
+          src="img/loggo.png"
+          height="25"
+          alt="MDB Logo"
+          loading="logo"
+        />-->
+      </a>
+     
+    </div>
+    <!-- Collapsible wrapper -->
+    
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          data-mdb-dropdown-init
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          aria-expanded="false"
+        >
+          <img
+            src="img/profile-icon.png"
+            class="rounded-circle"
+            height="50"
+            alt="profile icon"
+            loading="lazy"
+          />
+        </a>
+        <!--<ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>-->
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<!--main content-->
+  <div class="container wallet-container">
+    <div class="row justify-content-center ">
+      <div class="col-md-6">
+        <div class="card wallet-card">
+          <div class="card-header wallet-header">
+            <h3>Crypto Wallet Dashboard</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="wallet-details">
+                  <h5>Wallet Balance</h5>
+                  <p class="wallet-balance">1500 USDT</p>
+                  
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- Transaction History -->
+        <div class="card wallet-card">
+          <!--icons-->
+          <div class="container mt-5">
+            <!-- Icon Section -->
+            <div class="row text-center">
+
+              <div class="col-4 circle">
+                 <i class="fa fa-long-arrow-up"  
+                 id="infoIcon" 
+                 data-bs-toggle="popover" data-bs-content="you cannot withdraw until you have made at 
+                 least 1000usdt payment."
+                 aria-hidden="true"></i>
+                <!--<i id="infoButton" class="fa fa-long-arrow-up" aria-hidden="true"></i>-->
+                <p>withdraw</p>
+              </div>
+
+              <div class="col-4 circle">
+                <i class="fa fa-long-arrow-down"
+                id="infoIconn" 
+                data-bs-toggle="popover" data-bs-content="click on your preferred token to make a deposit."
+                aria-hidden="true"></i>
+                <p>deposit</p>
+              </div>
+
+              <div class="col-4 circle">
+                <i class="fa fa-credit-card-alt"
+                id="infoIconnn" 
+                data-bs-toggle="popover" data-bs-content="you don't have a bonus yet."
+                aria-hidden="true"></i>
+                <p style="align-items: center;">check bonus</p>
+              </div>
+            </div>
+          </div>
+
+          <!--coins places-->
+          <div class="card-body">
+            <p class="p-3" style="font-weight:bold;">Crypto</p>
+            <ul class="list-group">
+              <a href="#myModal" data-bs-toggle="modal" class="btn"
+              style="text-decoration: none;">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="img/tether.png" alt="USDT" height="40">
+                USDT
+                <span class="badge bg-dark">$1500 USDT</span>
+              </li>
+              </a>
+             
+              <!--<a href="#myModal" data-bs-toggle="modal" class="btn">Open Modal</a>-->
+              <a href="#myModall" data-bs-toggle="modal" class="btn" style="text-decoration: none;">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="img/bitcoin.png" alt="Bitcoin" height="40">
+                Bitcoin
+                
+                <span class="badge bg-dark">$0.00 BTC</span>
+              </li>
+              </a>
+
+              <a href="#myModalll" data-bs-toggle="modal" class="btn" style="text-decoration: none;">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="img/ethereum.png" alt="ethereum" height="40">
+                Ethereum
+                <span class="badge bg-dark">$0.00 ETH</span>
+              </li>
+              </a>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal1 -->
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal content goes here -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">USDT ADDRESS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>USDT TRC20 : 
+          <br>
+          TTzJDs9T5o8N4bBNsqZV2nNUJEjUCjtSoR</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- Modal2 -->
+   <div class="modal fade" id="myModall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal content goes here -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">BITCOIN ADDRESS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>BTC : 
+          <br>
+          bc1qe342zuj5cxah7wt9ntjfvx3faph9xejeg7n9p5</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- Modal3 -->
+   <div class="modal fade" id="myModalll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal content goes here -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ETHEREUM ADDRESS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>ETHEREUM :
+          <br>
+          0x0368d3b3D4A72137858c1868914265613270d350</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <footer class="bg-light text-light">
+    <div class="container">
+      <!-- Logo -->
+      <i class="fa fa-long-arrow-left" style="color: #000000;"></i><a href="index.html">
+        <img src="img/loggo.png" alt="Company Logo" width="200px"
+      class="img-fluid mb-3" style="max-width: 100px;"></a>
+    </div>
+  </footer>
+  
+
+
+<script>
+  // Initialize popover on the icon
+  var infoIcon = new bootstrap.Popover(document.getElementById('infoIcon'), {
+    placement: 'top',
+    trigger: 'click', // Show popover on hover
+  });
+  var infoIcon = new bootstrap.Popover(document.getElementById('infoIconn'), {
+    placement: 'top',
+    trigger: 'click', // Show popover on hover
+  });
+  var infoIcon = new bootstrap.Popover(document.getElementById('infoIconnn'), {
+    placement: 'top',
+    trigger: 'click', // Show popover on hover
+  });
+</script>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Bootstrap JS and Popper.js (version 4) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
